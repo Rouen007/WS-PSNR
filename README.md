@@ -14,6 +14,8 @@ in directory WS-PSNR/WS-PSNR
  
  main.exe <command>
 
+![](https://github.com/Rouen007/WS-PSNR/pic/001.PNG)
+
 WS-PSNR is a metric to evaluate the difference (quality) between two video clips in spherical domain. Here WS-PSNR is utilized as the objective quality metrics between objective quality between the reference video X and the test video X’. WS-PSNR   can supports evaluatinge the quality of omnidirectional video with YUV4:2:0 format in the meaning of sphere. Currently, it only supports video with YUV4:2:0 format and The constraint is that original and reconstructed videos should belong toshares the same format with sameand resolution, as show in Figure 1, in which Video X’ means Video X with some distortion but the format of X’ and X is same.. And we will release new versions of software to support more general cases.  Video X’ means Video X with some distortion but the format of X’ and X is same. 
 
 #Input parameters
@@ -33,7 +35,7 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 
 -f:     Index of video format      default：Index=0 (Equirectangular)
 
-![image]https://github.com/Rouen007/WS-PSNR/pic/002.PNG
+![](https://github.com/Rouen007/WS-PSNR/pic/002.PNG)
 
 ##	Example
 1.	 Calcultate WS-PSNR of original video A and reconstructed B with equirectangular format (4096*2048) for 100 frames (YUV420 8bit/sample)
