@@ -1,5 +1,4 @@
-# WS-PSNR
-WS-PSNR 
+# WS-PSNR 
 
 ##For Linux user:
 in directory WS-PSNR/WS-PSNR
@@ -35,7 +34,7 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 
 -f:     Index of video format      default：Index=0 (Equirectangular)
 
-![figure2](http://github.com/Rouen007/WS-PSNR/tree/master/pic/002.jpg)
+![figure2](/pic/002.jpg)
 
 ##	Example
 1. Calcultate WS-PSNR of original video A and reconstructed B with equirectangular format (4096*2048) for 100 frames (YUV420 8bit/sample)
