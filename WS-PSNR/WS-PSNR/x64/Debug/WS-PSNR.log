@@ -1,0 +1,113 @@
+﻿生成启动时间为 2016/8/12 13:58:32。
+     1>项目“F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Debug\WS-PSNR.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“x64\Debug\WS-PSNR.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\vs\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /Od /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Debug\\" /Fd"x64\Debug\vc100.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+     1>main.cpp(75): warning C4800: “int”: 将值强制为布尔值“true”或“false”(性能警告)
+     1>main.cpp(76): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>main.cpp(77): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>main.cpp(132): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(143): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(210): warning C4806: “==”: 不安全操作: 从类型“bool”提升到类型“int”的值不能等于给定的常量
+     1>main.cpp(220): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(231): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(322): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(338): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(339): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(343): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(344): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(348): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(349): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(353): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(354): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(358): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(359): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(363): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(364): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(367): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(368): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(369): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(387): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(388): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(392): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(393): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(397): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(398): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(402): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(403): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(407): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(408): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(412): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(413): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(416): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(417): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(418): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(432): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(433): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(437): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(438): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(442): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(443): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(447): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(448): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(452): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(453): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(457): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(458): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(461): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(462): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(463): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(474): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(475): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(479): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(480): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(484): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(485): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(489): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(490): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(494): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(495): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(499): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(500): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(503): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(504): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(505): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(523): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(524): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(528): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(529): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(533): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(534): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(538): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(539): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(543): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(544): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(548): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(549): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(554): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(555): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(556): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>f:\研究生\3d 工作文档\software\ws-psnr\ws-psnr\ws-psnr\main.cpp(567): warning C4715: “getWeight”: 不是所有的控件路径都返回值
+       Link:
+         E:\vs\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Debug\WS-PSNR.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Debug\WS-PSNR.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Debug\WS-PSNR.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Debug\WS-PSNR.lib" /MACHINE:X64 x64\Debug\main.obj
+         WS-PSNR.vcxproj -> F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Debug\WS-PSNR.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Debug\WS-PSNR.exe;#1" /manifest "x64\Debug\WS-PSNR.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“x64\Debug\WS-PSNR.unsuccessfulbuild”。
+         正在对“x64\Debug\WS-PSNR.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.15

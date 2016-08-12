@@ -1,0 +1,17 @@
+﻿Build started 2016/8/12 16:48:32.
+     1>Project "C:\Users\Luang-Rouen\Desktop\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Creating "Debug\WS-PSNR.unsuccessfulbuild" because "AlwaysCreate" was specified.
+       ClCompile:
+         All outputs are up-to-date.
+       Link:
+         All outputs are up-to-date.
+         WS-PSNR.vcxproj -> C:\Users\Luang-Rouen\Desktop\WS-PSNR\Debug\WS-PSNR.exe
+       FinalizeBuildStatus:
+         Deleting file "Debug\WS-PSNR.unsuccessfulbuild".
+         Touching "Debug\WS-PSNR.lastbuildstate".
+     1>Done Building Project "C:\Users\Luang-Rouen\Desktop\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj" (build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06

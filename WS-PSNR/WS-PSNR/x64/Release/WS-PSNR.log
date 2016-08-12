@@ -1,0 +1,109 @@
+﻿生成启动时间为 2016/8/11 21:32:00。
+     1>项目“F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“x64\Release\WS-PSNR.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“x64\Release\WS-PSNR.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
+       ClCompile:
+         E:\vs\VC\bin\x86_amd64\CL.exe /c /Zi /nologo /W3 /WX- /O2 /Oi /GL /D _MBCS /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Fo"x64\Release\\" /Fd"x64\Release\vc100.pdb" /Gd /TP /errorReport:prompt main.cpp
+         main.cpp
+     1>main.cpp(75): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>main.cpp(76): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\string.h(105) : 参见“strcpy”的声明
+     1>main.cpp(146): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(177): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 E:\vs\VC\include\stdio.h(234) : 参见“fopen”的声明
+     1>main.cpp(276): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(292): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(293): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(297): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(298): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(302): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(303): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(307): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(308): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(312): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(313): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(317): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(318): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(321): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(322): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(323): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(341): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(342): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(346): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(347): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(351): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(352): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(356): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(357): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(361): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(362): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(366): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(367): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(370): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(371): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(372): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(386): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(387): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(391): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(392): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(396): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(397): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(401): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(402): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(406): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(407): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(411): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(412): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(415): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(416): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(417): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(428): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(429): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(433): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(434): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(438): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(439): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(443): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(444): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(448): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(449): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(453): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(454): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(457): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(458): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(459): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(477): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(478): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(482): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(483): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(487): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(488): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(492): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(493): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(497): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(498): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(502): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(503): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(508): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>main.cpp(509): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>main.cpp(510): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+       Link:
+         E:\vs\VC\bin\x86_amd64\link.exe /ERRORREPORT:PROMPT /OUT:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Release\WS-PSNR.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"x64\Release\WS-PSNR.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Release\WS-PSNR.pdb" /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Release\WS-PSNR.lib" /MACHINE:X64 x64\Release\main.obj
+         正在生成代码
+     1>f:\研究生\3d 工作文档\software\ws-psnr\ws-psnr\ws-psnr\main.cpp(521): warning C4715: “getWeight”: 不是所有的控件路径都返回值
+         已完成代码的生成
+         WS-PSNR.vcxproj -> F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Release\WS-PSNR.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\x64\Release\WS-PSNR.exe;#1" /manifest "x64\Release\WS-PSNR.exe.intermediate.manifest"
+       FinalizeBuildStatus:
+         正在删除文件“x64\Release\WS-PSNR.unsuccessfulbuild”。
+         正在对“x64\Release\WS-PSNR.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“F:\研究生\3D 工作文档\software\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”(rebuild 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.27
