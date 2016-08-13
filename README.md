@@ -13,13 +13,13 @@ in directory WS-PSNR/WS-PSNR
  
  main.exe "Input parameters"
 
-![figure1](/pic/001.jpg)
+![figure1](/pic/003.PNG)
 
-WS-PSNR is a metric to evaluate the difference (quality) between two video clips in spherical domain. Here WS-PSNR is utilized as the objective quality metrics between objective quality between the reference video X and the test video X’. WS-PSNR   can supports evaluatinge the quality of omnidirectional video with YUV4:2:0 format in the meaning of sphere. Currently, it only supports video with YUV4:2:0 format and The constraint is that original and reconstructed videos should belong toshares the same format with sameand resolution, as show in Figure 1, in which Video X’ means Video X with some distortion but the format of X’ and X is same.. And we will release new versions of software to support more general cases.  Video X’ means Video X with some distortion but the format of X’ and X is same. 
+WS-PSNR is a metric to evaluate the difference (quality) between two video clips in spherical domain. Here WS-PSNR is utilized as the objective quality metrics between the reference video X and the test video X’. WS-PSNR supports evaluating the quality of omnidirectional video in the meaning of sphere. Currently, it only supports video with YUV4:2:0 format and original and reconstructed videos shares the same format and resolution, as show in Figure 1, in which Video X’ means Video X with some distortion but the format of X’ and X is same. And we will release new versions of software to support more general cases. 
 
 #Input parameters
 ##Mandatory:
-	(if you add the parameter “-help”:   It will give you a hint how how to use the software)
+	(if you add the parameter “-help”:   It will give you a hint on how to use the software)
 
 -w:     Video width
 
@@ -38,7 +38,7 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 
 -f:     Index of video format      default：Index=0 (Equirectangular)
 
-![figure2](/pic/002.jpg)
+![figure2](/pic/004.PNG)
 
 ##	Example
 ### Calcultate WS-PSNR of original video A and reconstructed B with equirectangular format (4096*2048) for 100 frames (YUV420 8bit/sample)
@@ -50,6 +50,10 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 -w 2048 -h 3072 -n 300 –x 2 -f 2 –o C.yuv –r D.yuv
 
 
+### Remarks
+Other formats can also be added to be evaluated using WS-PSNR if needed.
 
 
 ###Yule Sun, Zhejiang University, sunyule@zju.edu.cn
+###Lu Yu,    Zhejiang University,     yul@zju.edu.cn
+###Ang Lu,   Zhejiang University, luangss@zju.edu.cn
