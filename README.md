@@ -21,7 +21,7 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 ##Mandatory:
 	(if you add the parameter “-help”:   It will give you a hint on how to use the software)
 
--w:     Video width
+-w:      Video width
 
 -h :     Video height
 
@@ -41,11 +41,11 @@ WS-PSNR is a metric to evaluate the difference (quality) between two video clips
 ![figure2](/pic/004.PNG)
 
 ##	Example
-### Calcultate WS-PSNR of original video A and reconstructed B with equirectangular format (4096*2048) for 100 frames (YUV420 8bit/sample)
+### Calcultate WS-PSNR of original video A and reconstructed B with equirectangular format (4096 * 2048) for 100 frames (YUV420 8bit/sample)
 
 -w 4096 -h 2048 -n 100 –o A.yuv -r B.yuv
 
-### Calcultate WS-PSNR of original video C and reconstructed D with Cubic with 2*3 type format (2048*3072) for 300 frames (YUV420 10bit/sample)
+### Calcultate WS-PSNR of original video C and reconstructed D with Cubic with 2*3 type format (2048 * 3072) for 300 frames (YUV420 10bit/sample)
 
 -w 2048 -h 3072 -n 300 –x 2 -f 2 –o C.yuv –r D.yuv
 
