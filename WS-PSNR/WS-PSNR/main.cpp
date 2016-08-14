@@ -1,9 +1,9 @@
 /*
- * This software module WS-PSNR(uniform weight in sphere PSNR) was originally developed by 
+ * This software WS-PSNR (Weighted to Spherically uniform PSNR) was originally developed by 
  * Zhejiang University and its performance may not have been optimized.
  
- * Those intending to use this software module in products are advised that its use may infringe 
- * existing patents.Assurance that the originally developed software module can be used for academic purpose.
+ * Those intending to use this software in products are advised that its use may infringe 
+ * existing patents. Assurance that the originally developed software module can be used for academic purpose.
 
  * Zhejiang University retains full right to modify and use the code for its own purpose, assign or donate the 
  * code to a third party and to inhibit third parties from using the code for products. 

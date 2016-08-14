@@ -1,17 +1,110 @@
-﻿Build started 2016/8/12 16:48:32.
-     1>Project "C:\Users\Luang-Rouen\Desktop\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj" on node 2 (build target(s)).
-     1>InitializeBuildStatus:
-         Creating "Debug\WS-PSNR.unsuccessfulbuild" because "AlwaysCreate" was specified.
+﻿生成启动时间为 2016/8/12 17:00:38。
+     1>项目“D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”在节点 2 上(rebuild 个目标)。
+     1>_PrepareForClean:
+         正在删除文件“Debug\WS-PSNR.lastbuildstate”。
+       InitializeBuildStatus:
+         正在创建“Debug\WS-PSNR.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         All outputs are up-to-date.
+         E:\vs\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
+         main.cpp
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(71): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(72): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\string.h(105) : 参见“strcpy”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(120): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(130): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(203): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(213): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 e:\vs\vc\include\stdio.h(234) : 参见“fopen”的声明
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(299): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(312): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(313): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(316): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(317): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(320): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(321): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(324): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(325): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(328): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(329): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(332): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(333): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(336): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(337): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(338): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(354): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(355): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(358): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(359): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(362): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(363): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(366): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(367): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(370): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(371): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(374): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(375): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(378): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(379): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(380): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(392): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(393): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(396): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(397): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(400): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(401): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(404): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(405): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(408): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(409): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(412): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(413): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(416): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(417): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(418): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(427): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(428): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(431): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(432): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(435): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(436): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(439): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(440): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(443): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(444): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(447): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(448): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(451): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(452): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(453): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(469): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(470): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(473): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(474): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(477): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(478): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(481): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(482): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(485): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(486): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(489): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(490): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(495): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(496): warning C4244: “=”: 从“int”转换到“float”，可能丢失数据
+     1>d:\users\administrator\desktop\ws-psnr\ws-psnr\ws-psnr\main.cpp(497): warning C4244: “=”: 从“double”转换到“float”，可能丢失数据
        Link:
-         All outputs are up-to-date.
-         WS-PSNR.vcxproj -> C:\Users\Luang-Rouen\Desktop\WS-PSNR\Debug\WS-PSNR.exe
+         E:\vs\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\Debug\WS-PSNR.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\WS-PSNR.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\Debug\WS-PSNR.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\Debug\WS-PSNR.lib" /MACHINE:X86 Debug\main.obj
+         WS-PSNR.vcxproj -> D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\Debug\WS-PSNR.exe
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\Debug\WS-PSNR.exe;#1" /manifest "Debug\WS-PSNR.exe.intermediate.manifest"
        FinalizeBuildStatus:
-         Deleting file "Debug\WS-PSNR.unsuccessfulbuild".
-         Touching "Debug\WS-PSNR.lastbuildstate".
-     1>Done Building Project "C:\Users\Luang-Rouen\Desktop\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj" (build target(s)).
+         正在删除文件“Debug\WS-PSNR.unsuccessfulbuild”。
+         正在对“Debug\WS-PSNR.lastbuildstate”执行 Touch 任务。
+     1>已完成生成项目“D:\Users\Administrator\Desktop\WS-PSNR\WS-PSNR\WS-PSNR\WS-PSNR.vcxproj”(rebuild 个目标)的操作。
 
-Build succeeded.
+生成成功。
 
-Time Elapsed 00:00:00.06
+已用时间 00:00:02.45
