@@ -27,7 +27,7 @@
 #include <string.h>
 
 int main(int argc, char* argv[]) {
-	float getWeight(int form,int i,int j,int width,int height);
+	double getWeight(int form,int i,int j,int width,int height);
 
 	int width		= -1;
 	int height	= -1;
@@ -63,13 +63,13 @@ int main(int argc, char* argv[]) {
 	}
 
 	for( iArgIdx = 1; iArgIdx < argc; iArgIdx += 2) {
-		if      (strcmp("-w", argv[iArgIdx]) == 0)  width      = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-h", argv[iArgIdx]) == 0)  height     = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-n", argv[iArgIdx]) == 0)  num_frame  = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-f", argv[iArgIdx]) == 0)  form       = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-x", argv[iArgIdx]) == 0)  ColorSpace = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-o", argv[iArgIdx]) == 0)  strcpy(Comp_File1,     argv[iArgIdx + 1]);
-		else if (strcmp("-r",argv[iArgIdx])  == 0)  strcpy(Comp_File2,    argv[iArgIdx + 1]);
+		if      (strcmp("-w", argv[iArgIdx]) == 0)   width      = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-h", argv[iArgIdx]) == 0)   height     = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-n", argv[iArgIdx]) == 0)   num_frame  = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-f", argv[iArgIdx]) == 0)   form       = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-x", argv[iArgIdx]) == 0)   ColorSpace = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-o", argv[iArgIdx]) == 0)   strcpy(Comp_File1,    argv[iArgIdx + 1]);
+		else if (strcmp("-r", argv[iArgIdx])  == 0)  strcpy(Comp_File2,    argv[iArgIdx + 1]);
 
 	}
 
@@ -140,10 +140,10 @@ int main(int argc, char* argv[]) {
 			double ssdR_U = 0;
 			double ssdR_V = 0;
 
-			float latWeight   = 0;
-			float totWeight_Y = 0;
-			float totWeight_U = 0;
-			float totWeight_V = 0;
+			double latWeight   = 0;
+			double totWeight_Y = 0;
+			double totWeight_U = 0;
+			double totWeight_V = 0;
 
 			for(int j = 0;j < height;j++) {
 				for(int i=0;i<width;i++) {
@@ -223,10 +223,10 @@ int main(int argc, char* argv[]) {
 			double ssdR_U=0;
 			double ssdR_V=0;
 
-			float latWeight=0;
-			float totWeight_Y=0;
-			float totWeight_U=0;
-			float totWeight_V=0;
+			double latWeight=0;
+			double totWeight_Y=0;
+			double totWeight_U=0;
+			double totWeight_V=0;
 
 			for(int j = 0;j < height;j++){
 				for(int i = 0;i < width;i++) {
@@ -292,8 +292,8 @@ int main(int argc, char* argv[]) {
 	//system("pause");
 }
 
-float getWeight(int form,int i,int j,int width,int height){
-	float a;
+double getWeight(int form,int i,int j,int width,int height){
+	double a;
  //======  format0: Equirectangular  =======  
 	if (form == 0) {
 		a = cos((j-(height/2-0.5))*3.1415926/height);
@@ -307,7 +307,9 @@ float getWeight(int form,int i,int j,int width,int height){
              // 4 4 5 5 6 6
 
 	else if (form == 1) {
-		float ci, cj,r2,d2;
+    int ci, cj,r2;
+    double d2;
+
 		if (i < width/3 && j < height/2) {
 			ci = width/6;
 			cj = height/4;
@@ -348,7 +350,8 @@ float getWeight(int form,int i,int j,int width,int height){
           // 5 5 6 6
 
 	else if (form == 2) {
-		float ci, cj,r2,d2;
+    int ci, cj,r2;
+    double d2;
 
 		if (i < width/2 && j < height/3) {
 			ci = width/4;
@@ -386,7 +389,8 @@ float getWeight(int form,int i,int j,int width,int height){
   //   1 1 2 2 3 3 4 4 5 5 6 6 
 
 	else if (form == 3) {
-		float ci, cj,r2,d2;
+    int ci, cj,r2;
+    double d2;
 
 		if (i < width/6 ) {
 			ci = width/12;
@@ -421,7 +425,8 @@ float getWeight(int form,int i,int j,int width,int height){
 
   //======  format4:  Cubic with 1*6 faces  =======  
 	else if (form == 4) {
-		float ci, cj,r2,d2;
+		int ci, cj,r2;
+    double d2;
 
 		if (j < height/6 ) {
 		    ci = width/2;
@@ -463,7 +468,8 @@ float getWeight(int form,int i,int j,int width,int height){
   // 6 6 * * * * * *
   
 	else if (form == 5) {
-		float ci, cj, r2, d2;
+    int ci, cj,r2;
+    double d2;
 
 		if (i < width/4 && j < height/3 ) {
 			ci = width/8;
