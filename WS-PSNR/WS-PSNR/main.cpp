@@ -1,22 +1,42 @@
 /*
- * This software WS-PSNR (Weighted to Spherically uniform PSNR) was originally developed by 
- * Zhejiang University and its performance may not have been optimized.
+  The copyright in this software is being made available under the BSD
+  License, included below. This software may be subject to other third party
+  and contributor rights, including patent rights, and no such rights are
+  granted under this license.
  
- * Those intending to use this software in products are advised that its use may infringe 
- * existing patents. Assurance that the originally developed software module can be used for academic purpose.
+  Copyright (c) 2016, Zhejiang University.
+  All rights reserved.
 
- * Zhejiang University retains full right to modify and use the code for its own purpose, assign or donate the 
- * code to a third party and to inhibit third parties from using the code for products. 
- *
- * This copyright notice must be included in all copies or derivative works.
- * Copyright (c) Zhejiang University 2016.
- *
- * Authors:
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions are met:
+
+   * Redistributions of source code must retain the above copyright notice,
+     this list of conditions and the following disclaimer.
+   * Redistributions in binary form must reproduce the above copyright notice,
+     this list of conditions and the following disclaimer in the documentation
+     and/or other materials provided with the distribution.
+   * Neither the name of Samsung Electronics Co., Ltd. nor the names of its
+     contributors may be used to endorse or promote products derived from
+     this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+  AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+  IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+  ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS
+  BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+  CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+  SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+  INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+  CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+  ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF
+  THE POSSIBILITY OF SUCH DAMAGE.
+ 
+ *  Authors:
  *      Yule Sun,        Zhejiang University (ZJU),               sunyule@zju.edu.cn
  *      Ang Lu,          Zhejiang University (ZJU),               luangss@zju.edu.cn
  *      Lu  Yu,          Zhejiang University (ZJU),               yul@zju.edu.cn
  *
- * Reference:
+ *  Reference:
  *     WS-PSNR for 360 video quality evaluation  Yule Sun, Ang Lu, Lu Yu,     
  *     ISO/IEC JTC1/SC29/WG11 MPEG2016/M38551, May 2016, Geneva                 
  */
@@ -63,13 +83,13 @@ int main(int argc, char* argv[]) {
 	}
 
 	for( iArgIdx = 1; iArgIdx < argc; iArgIdx += 2) {
-		if      (strcmp("-w", argv[iArgIdx]) == 0)   width      = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-h", argv[iArgIdx]) == 0)   height     = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-n", argv[iArgIdx]) == 0)   num_frame  = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-f", argv[iArgIdx]) == 0)   form       = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-x", argv[iArgIdx]) == 0)   ColorSpace = atoi(argv[iArgIdx + 1]);
-		else if (strcmp("-o", argv[iArgIdx]) == 0)   strcpy(Comp_File1,    argv[iArgIdx + 1]);
-		else if (strcmp("-r", argv[iArgIdx])  == 0)  strcpy(Comp_File2,    argv[iArgIdx + 1]);
+		if      (strcmp("-w", argv[iArgIdx]) == 0)  width      = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-h", argv[iArgIdx]) == 0)  height     = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-n", argv[iArgIdx]) == 0)  num_frame  = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-f", argv[iArgIdx]) == 0)  form       = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-x", argv[iArgIdx]) == 0)  ColorSpace = atoi(argv[iArgIdx + 1]);
+		else if (strcmp("-o", argv[iArgIdx]) == 0)  strcpy(Comp_File1,     argv[iArgIdx + 1]);
+		else if (strcmp("-r",argv[iArgIdx])  == 0)  strcpy(Comp_File2,    argv[iArgIdx + 1]);
 
 	}
 
