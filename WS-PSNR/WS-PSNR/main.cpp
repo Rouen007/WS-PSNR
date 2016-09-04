@@ -52,7 +52,7 @@ int main(int argc, char* argv[]) {
 	int width		= -1;
 	int height	= -1;
 	int num_frame = -1;
-	int CountFrame;
+	long long CountFrame;
 	int form		= 0;
 	int ColorSpace= 1;
 	double psnr_sphere_Y = 0;
@@ -136,10 +136,13 @@ int main(int argc, char* argv[]) {
 		ReconFileBuffer		= (unsigned char *)malloc(sizeof(unsigned char)*width*height*3/2);
 
 		for(CountFrame = 0;CountFrame < num_frame;CountFrame++) {
+
 			printf("   %d ",CountFrame);
 			FpOriginalFile = fopen(Comp_File1,"rb");
 
-			fseek(FpOriginalFile,height*width*3/2*CountFrame,SEEK_SET);
+			long long offset= height*width*3/2*CountFrame;
+
+			_fseeki64(FpOriginalFile,offset,SEEK_SET);
 			if (fread(OriginalFileBuffer,height*width*3/2,1, FpOriginalFile) != 1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -148,7 +151,7 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile = fopen(Comp_File2,"rb");
-			fseek(FpReconFile,height*width*3/2*CountFrame,SEEK_SET);
+			_fseeki64(FpReconFile,offset,SEEK_SET);
 			if (fread(ReconFileBuffer,height*width*3/2,1, FpReconFile) != 1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
@@ -222,7 +225,8 @@ int main(int argc, char* argv[]) {
 			printf("   %d ",CountFrame);
 			FpOriginalFile=fopen(Comp_File1,"rb");
 
-			fseek(FpOriginalFile,height*width*3*CountFrame,SEEK_SET);
+			long long offset=height*width*3*CountFrame;
+			_fseeki64(FpOriginalFile,offset,SEEK_SET);
 			if (fread(OriginalFileBuffer,height*width*3,1, FpOriginalFile)!=1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -231,7 +235,7 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile=fopen(Comp_File2,"rb");
-			fseek(FpReconFile,height*width*3*CountFrame,SEEK_SET);
+			_fseeki64(FpReconFile,offset,SEEK_SET);
 			if (fread(ReconFileBuffer,height*width*3,1, FpReconFile)!=1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
