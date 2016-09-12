@@ -45,7 +45,9 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-
+#ifdef __linux
+#define _FILE_OFFSET_BITS 64
+#endif
 int main(int argc, char* argv[]) {
 	double getWeight(int form,int i,int j,int width,int height);
 
@@ -141,8 +143,11 @@ int main(int argc, char* argv[]) {
 			FpOriginalFile = fopen(Comp_File1,"rb");
 
 			long long offset= height*width*3/2*CountFrame;
-
+			#ifdef  _WIN64
 			_fseeki64(FpOriginalFile,offset,SEEK_SET);
+			#else
+			fseek(FpOriginalFile,offset,SEEK_SET);
+			#endif
 			if (fread(OriginalFileBuffer,height*width*3/2,1, FpOriginalFile) != 1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -151,7 +156,11 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile = fopen(Comp_File2,"rb");
+			#ifdef  _WIN64
 			_fseeki64(FpReconFile,offset,SEEK_SET);
+			#else
+			fseek(FpReconFile,offset,SEEK_SET);
+			#endif
 			if (fread(ReconFileBuffer,height*width*3/2,1, FpReconFile) != 1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
@@ -226,7 +235,11 @@ int main(int argc, char* argv[]) {
 			FpOriginalFile=fopen(Comp_File1,"rb");
 
 			long long offset=height*width*3*CountFrame;
+			#ifdef  _WIN64
 			_fseeki64(FpOriginalFile,offset,SEEK_SET);
+			#else
+			fseek(FpOriginalFile,offset,SEEK_SET);
+			#endif
 			if (fread(OriginalFileBuffer,height*width*3,1, FpOriginalFile)!=1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -235,7 +248,11 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile=fopen(Comp_File2,"rb");
+			#ifdef  _WIN64
 			_fseeki64(FpReconFile,offset,SEEK_SET);
+			#else
+			fseek(FpReconFile,offset,SEEK_SET);
+			#endif
 			if (fread(ReconFileBuffer,height*width*3,1, FpReconFile)!=1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
