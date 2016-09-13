@@ -7,7 +7,7 @@ in directory WS-PSNR/WS-PSNR
 
  $> ./main "Input parameters"
 
-##For Windows user:(VS2010)
+##For Windows user:(VS2010 X64)
 
  click WS-PSNR.sln
  
