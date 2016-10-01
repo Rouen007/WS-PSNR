@@ -45,15 +45,13 @@
 #include <math.h>
 #include <stdlib.h>
 #include <string.h>
-#ifdef __linux
-#define _FILE_OFFSET_BITS 64
-#endif
+
 int main(int argc, char* argv[]) {
 	double getWeight(int form,int i,int j,int width,int height);
 
 	int width		= -1;
-	int height	= -1;
-	int num_frame = -1;
+	int height		= -1;
+	int num_frame 	= -1;
 	long long CountFrame;
 	int form		= 0;
 	int ColorSpace= 1;
@@ -114,13 +112,14 @@ int main(int argc, char* argv[]) {
 		exit(1);
     }
 
-	if		(form == 0)	  printf(" Format : Equirectangular \n");
+	if		  (form == 0)	  printf(" Format : Equirectangular \n");
 	else if (form == 1)	  printf(" Format : Cubic with 3*2 type\n");
 	else if (form == 2)	  printf(" Format : Cubic with 2*3 type\n");
 	else if (form == 3)	  printf(" Format : Cubic with 6*1 type\n");
 	else if (form == 4)   printf(" Format : Cubic with 1*6 type\n");
 	else if (form == 5)   printf(" Format : Cubic with T type\n");
-	// else if (form==6)  printf(" Format : Icosahedron \n");
+	else if (form == 6)   printf(" Format : Icosahedron \n");
+	else if (form == 7)   printf(" Format : Octahedron \n");
 	else {
 	  printf("Invalid input option for format index \n");
 	  //system("pause");
@@ -143,11 +142,8 @@ int main(int argc, char* argv[]) {
 			FpOriginalFile = fopen(Comp_File1,"rb");
 
 			long long offset= height*width*3/2*CountFrame;
-			#ifdef  _WIN64
+
 			_fseeki64(FpOriginalFile,offset,SEEK_SET);
-			#else
-			fseek(FpOriginalFile,offset,SEEK_SET);
-			#endif
 			if (fread(OriginalFileBuffer,height*width*3/2,1, FpOriginalFile) != 1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -156,11 +152,7 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile = fopen(Comp_File2,"rb");
-			#ifdef  _WIN64
 			_fseeki64(FpReconFile,offset,SEEK_SET);
-			#else
-			fseek(FpReconFile,offset,SEEK_SET);
-			#endif
 			if (fread(ReconFileBuffer,height*width*3/2,1, FpReconFile) != 1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
@@ -178,68 +170,64 @@ int main(int argc, char* argv[]) {
 			double totWeight_V = 0;
 
 			for(int j = 0;j < height;j++) {
-				for(int i=0;i<width;i++) {
+				for(int i = 0;i < width;i++) {
 					latWeight = getWeight(form,i,j,width,height);
-					double v=OriginalFileBuffer[j*width+i]-ReconFileBuffer[j*width+i];
+					double v = OriginalFileBuffer[j * width + i] - ReconFileBuffer[j * width + i];
 
-					ssdR_Y+=100000*v*v*latWeight;
-					totWeight_Y+=latWeight;
+					ssdR_Y += 100000 * v * v * latWeight;
+					totWeight_Y += latWeight;
 				}
 			}
-			double mseR_Y = ssdR_Y/totWeight_Y/100000;
-			double psrR_Y= 10*log10(255*255/mseR_Y);
+			double mseR_Y = ssdR_Y / totWeight_Y / 100000;
+			double psrR_Y = 10 * log10(255 * 255 / mseR_Y);
 
 			printf("    %.4f",psrR_Y);
-			psnr_sphere_Y+=psrR_Y;
+			psnr_sphere_Y += psrR_Y;
 
-			for(int j=0;j<height/2;j++) {
-				for(int i=0;i<width/2;i++) {
+			for(int j = 0;j < height / 2;j++) {
+				for(int i = 0;i < width / 2;i++) {
 					latWeight = getWeight(form,i,j,width/2,height/2);
-					double v=OriginalFileBuffer[width*height+j*width/2+i]-ReconFileBuffer[width*height+j*width/2+i];
+					double v = OriginalFileBuffer[width*height+j*width/2+i]-ReconFileBuffer[width*height+j*width/2+i];
 
-					ssdR_U+=100000*v*v*latWeight;
-					totWeight_U+=latWeight;
+					ssdR_U 		+= 100000*v*v*latWeight;
+					totWeight_U += latWeight;
 				}
 			}
-			double mseR_U = ssdR_U/totWeight_U/100000;
-			double psrR_U= 10*log10(255*255/mseR_U);
+			double mseR_U = ssdR_U / totWeight_U / 100000;
+			double psrR_U= 10 * log10(255 * 255 / mseR_U);
 
 			printf("    %.4f",psrR_U);
-			psnr_sphere_U+=psrR_U;
+			psnr_sphere_U += psrR_U;
 
-			for(int j=0;j<height/2;j++) {
-				for(int i=0;i<width/2;i++) {
+			for(int j = 0;j < height / 2;j++) {
+				for(int i = 0;i < width / 2;i++) {
 					latWeight = getWeight(form,i,j,width/2,height/2);
-					double v=OriginalFileBuffer[width*height*5/4+j*width/2+i]-ReconFileBuffer[width*height*5/4+j*width/2+i];
+					double v = OriginalFileBuffer[width*height*5/4+j*width/2+i]-ReconFileBuffer[width*height*5/4+j*width/2+i];
 
-					ssdR_V+=100000*v*v*latWeight;
-					totWeight_V+=latWeight;
+					ssdR_V 		+= 100000*v*v*latWeight;
+					totWeight_V += latWeight;
 				}
 			}
             double mseR_V = ssdR_V/totWeight_V/100000;
             double psrR_V = 10*log10(255*255/mseR_V);
 
             printf("    %.4f\n",psrR_V);
-            psnr_sphere_V+=psrR_V;
+            psnr_sphere_V += psrR_V;
 		}
 
 	}
-	else if (ColorSpace==2)	{
+	else if (ColorSpace == 2)	{
 		unsigned short *OriginalFileBuffer;
 		unsigned short *ReconFileBuffer;
 		OriginalFileBuffer  =  (unsigned short *)malloc(sizeof(unsigned short)*width*height*3/2);
-		ReconFileBuffer     = (unsigned short *)malloc(sizeof(unsigned short)*width*height*3/2);
+		ReconFileBuffer     =  (unsigned short *)malloc(sizeof(unsigned short)*width*height*3/2);
 
-		for(CountFrame=0;CountFrame<num_frame;CountFrame++) {
+		for(CountFrame = 0;CountFrame < num_frame;CountFrame++) {
 			printf("   %d ",CountFrame);
-			FpOriginalFile=fopen(Comp_File1,"rb");
+			FpOriginalFile = fopen(Comp_File1,"rb");
 
-			long long offset=height*width*3*CountFrame;
-			#ifdef  _WIN64
+			long long offset = height*width*3*CountFrame;
 			_fseeki64(FpOriginalFile,offset,SEEK_SET);
-			#else
-			fseek(FpOriginalFile,offset,SEEK_SET);
-			#endif
 			if (fread(OriginalFileBuffer,height*width*3,1, FpOriginalFile)!=1) {
 				printf("can't open the file %s \n",Comp_File1);
 				//system("pause");
@@ -248,11 +236,7 @@ int main(int argc, char* argv[]) {
 			fclose(FpOriginalFile);
 
 			FpReconFile=fopen(Comp_File2,"rb");
-			#ifdef  _WIN64
 			_fseeki64(FpReconFile,offset,SEEK_SET);
-			#else
-			fseek(FpReconFile,offset,SEEK_SET);
-			#endif
 			if (fread(ReconFileBuffer,height*width*3,1, FpReconFile)!=1) {
 				printf("can't open the file %s \n",Comp_File2);
 				//system("pause");
@@ -260,22 +244,22 @@ int main(int argc, char* argv[]) {
 			}
 			fclose(FpReconFile);
 
-			double ssdR_Y=0;
-			double ssdR_U=0;
-			double ssdR_V=0;
+			double ssdR_Y = 0;
+			double ssdR_U = 0;
+			double ssdR_V = 0;
 
-			double latWeight=0;
-			double totWeight_Y=0;
-			double totWeight_U=0;
-			double totWeight_V=0;
+			double latWeight   = 0;
+			double totWeight_Y = 0;
+			double totWeight_U = 0;
+			double totWeight_V = 0;
 
 			for(int j = 0;j < height;j++){
 				for(int i = 0;i < width;i++) {
 					latWeight = getWeight(form,i,j,width,height);
-					double v=OriginalFileBuffer[j*width+i]-ReconFileBuffer[j*width+i];
+					double v  = OriginalFileBuffer[j*width+i]-ReconFileBuffer[j*width+i];
 
-					ssdR_Y+=100000*v*v*latWeight;
-					totWeight_Y+=latWeight;
+					ssdR_Y		+= 100000*v*v*latWeight;
+					totWeight_Y	+= latWeight;
 				}
 			}
 			double mseR_Y = ssdR_Y/totWeight_Y/100000;
@@ -284,13 +268,13 @@ int main(int argc, char* argv[]) {
 			printf("    %.4f",psrR_Y);
 			psnr_sphere_Y+=psrR_Y;
 
-			for(int j = 0;j < height/2;j++) {
-				for(int i = 0;i < width/2;i++) {
+			for(int j = 0;j < height / 2;j++) {
+				for(int i = 0;i < width / 2;i++) {
 			        latWeight = getWeight(form,i,j,width/2,height/2);
-					double v=OriginalFileBuffer[width*height+j*width/2+i]-ReconFileBuffer[width*height+j*width/2+i];
+					double v  = OriginalFileBuffer[width*height+j*width/2+i]-ReconFileBuffer[width*height+j*width/2+i];
 
-					ssdR_U+=100000*v*v*latWeight;
-					totWeight_U+=latWeight;
+					ssdR_U		+= 100000*v*v*latWeight;
+					totWeight_U += latWeight;
 				}
 			}
 			double mseR_U = ssdR_U/totWeight_U/100000;
@@ -302,10 +286,10 @@ int main(int argc, char* argv[]) {
 			for(int j = 0;j < height/2;j++) {
 				for(int i = 0;i < width/2;i++) {
 					latWeight = getWeight(form,i,j,width/2,height/2);
-					double v=OriginalFileBuffer[width*height*5/4+j*width/2+i]-ReconFileBuffer[width*height*5/4+j*width/2+i];
+					double v  = OriginalFileBuffer[width*height*5/4+j*width/2+i]-ReconFileBuffer[width*height*5/4+j*width/2+i];
 
-		            ssdR_V+=100000*v*v*latWeight;
-					totWeight_V+=latWeight;
+		            ssdR_V		+= 100000*v*v*latWeight;
+					totWeight_V += latWeight;
 				}
 			}
             double mseR_V = ssdR_V/totWeight_V/100000;
@@ -322,9 +306,9 @@ int main(int argc, char* argv[]) {
 		exit(1);
 	}
 
-	psnr_sphere_Y = psnr_sphere_Y/num_frame;
-	psnr_sphere_U = psnr_sphere_U/num_frame;
-	psnr_sphere_V = psnr_sphere_V/num_frame;
+	psnr_sphere_Y = psnr_sphere_Y / num_frame;
+	psnr_sphere_U = psnr_sphere_U / num_frame;
+	psnr_sphere_V = psnr_sphere_V / num_frame;
 
 	printf("\n  Average W-PSNR_Y = %.4f \n",psnr_sphere_Y);
 	printf("  Average W-PSNR_U = %.4f \n",psnr_sphere_U);
@@ -546,10 +530,164 @@ double getWeight(int form,int i,int j,int width,int height){
   }
 
   //======  format6: Icosahedron =======  
-  //else if (form==6)
-  //{
+    else if (form==6)
+  {
+    int tri,ht;
+    int ci=0;
+    int cj=0;
+    double r2,d2;
+    tri=width*2/11;
+    ht=height/3;
 
-  //  return a;
-  //}
+    if      (i <  tri && j < ht && abs(i+0.5-tri/2)<j/sqrt(1.0*3) ) {
+      ci = tri/2;
+      cj = 2*ht/3;
+    }
+    else if (i >= tri && i < 2 * tri && j<ht && abs(i+0.5-3*tri/2)<j/sqrt(1.0*3)) {
+      ci = 3*tri/2;
+      cj = 2*ht/3;
+    }
+    else if (i >= 2 * tri && i < 3*tri && j < ht && abs(i+0.5-5*tri/2) < j/sqrt(1.0*3)) {
+      ci = 5*tri/2;
+      cj = 2*ht/3;
+    }
+    else if (i >= 3 * tri && i < 4 * tri && j < ht && abs(i+0.5-7*tri/2) < j/sqrt(1.0*3)) {
+      ci = 7*tri/2;
+      cj = 2*ht/3;
+    }
+    else if (i >= 4*tri && i < 5*tri && j < ht && abs(i+0.5-9*tri/2)<j/sqrt(1.0*3)) {
+      ci = 9*tri/2;
+      cj = 2*ht/3;
+    }
+
+    else if (i >= tri/2 && i < 3*tri/2 && j>=ht &&j < 2*ht && abs(i+0.5-tri)<(j-ht)/sqrt(1.0*3) ) {
+      ci = tri;
+      cj = 5*ht/3;
+    }
+    else if (i>=3*tri/2 && i<5*tri/2 && j>=ht && j < 2*ht && abs(i+0.5-2*tri)<(j-ht)/sqrt(1.0*3)) {
+      ci = 2*tri;
+      cj = 5*ht/3;
+    }
+    else if (i>=5*tri/2 && i<7*tri/2 && j>=ht && j < 2*ht && abs(i+0.5-3*tri)<(j-ht)/sqrt(1.0*3)) {
+      ci = 3*tri;
+      cj = 5*ht/3;
+    }
+    else if (i>=7*tri/2 && i<9*tri/2 && j>=ht && j < 2*ht && abs(i+0.5-4*tri)<(j-ht)/sqrt(1.0*3)) {
+      ci = 4*tri;
+      cj = 5*ht/3;
+    }
+    else if (i>=9*tri/2 && j>=ht && j < 2*ht && abs(i+0.5-5*tri)<(j-ht)/sqrt(1.0*3)) {
+      ci = 5*tri;
+      cj = 5*ht/3;
+    }
+
+    else if (i < tri && j>=ht && j < 2*ht && abs(i+0.5-tri/2)<(2*ht-j)/sqrt(1.0*3) ) {
+      ci = tri/2;
+      cj = 4*ht/3;
+    }
+    else if (i>=tri && i<2*tri && j>=ht && j < 2*ht && abs(i+0.5-3*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+      ci = 3*tri/2;
+      cj = 4*ht/3;
+    }
+    else if (i>=2*tri && i<3*tri && j>=ht && j < 2*ht && abs(i+0.5-5*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+      ci = 5*tri/2;
+      cj = 4*ht/3;
+    }
+    else if (i>=3*tri && i<4*tri && j>=ht && j < 2*ht && abs(i+0.5-7*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+      ci = 7*tri/2;
+      cj = 4*ht/3;
+    }
+    else if (i>=4*tri && i<5*tri && j>=ht && j < 2*ht && abs(i+0.5-9*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+      ci = 9*tri/2;
+      cj = 4*ht/3;
+    }
+
+    else if (i>=tri/2 && i < 3*tri/2 && j>=2*ht && abs(i+0.5-tri)<(3*ht-j)/sqrt(1.0*3) ) {
+      ci = tri;
+      cj = 7*ht/3;
+    }
+    else if (i>=3*tri/2 && i<5*tri/2 && j>=2*ht && abs(i+0.5-2*tri)<(3*ht-j)/sqrt(1.0*3)) {
+      ci = 2*tri;
+      cj = 7*ht/3;
+    }
+    else if (i>=5*tri/2 && i<7*tri/2 && j>=2* ht  && abs(i+0.5-3*tri)<(3*ht-j)/sqrt(1.0*3)) {
+      ci = 3*tri;
+      cj = 7*ht/3;
+    }
+    else if (i>=7*tri/2 && i<9*tri/2 && j>=2*ht && abs(i+0.5-4*tri)<(3*ht-j)/sqrt(1.0*3)) {
+      ci = 4*tri;
+      cj = 7*ht/3;
+    }
+    else if (i>=9*tri/2 && j>=2*ht && abs(i+0.5-5*tri)<(3*ht-j)/sqrt(1.0*3)) {
+      ci = 5*tri;
+      cj = 7*ht/3;
+    }
+
+    else {
+      return 0;
+    }
+    d2=(i+0.5-ci)*(i+0.5-ci)+(j+0.5-cj)*(j+0.5-cj);
+    r2 = (width*2/11/1.323169)*(width*2/11/1.323169);
+    a  = 1.0/((1+d2/r2)*sqrt(1.0*(1+d2/r2)));
+    return a;
+  }
+
+  //======  format7: OHP =======  
+    else if (form==7)
+    {
+      int tri,ht;
+      int ci = 0;
+      int cj = 0;
+      double r2,d2;
+      tri = width/4;
+      ht  = height/2;
+
+      if (i < tri && j < ht && abs(i+0.5-tri/2)<j/sqrt(1.0*3) ) {
+        ci = tri/2;
+        cj = 2*ht/3;
+      }
+      else if (i>=tri && i<2*tri && j<ht && abs(i+0.5-3*tri/2)<j/sqrt(1.0*3)) {
+        ci = 3*tri/2;
+        cj = 2*ht/3;
+      }
+      else if (i>=2*tri && i<3*tri && j<ht && abs(i+0.5-5*tri/2)<j/sqrt(1.0*3)) {
+        ci = 5*tri/2;
+        cj = 2*ht/3;
+      }
+      else if (i>=3*tri && j<ht && abs(i+0.5-7*tri/2)<j/sqrt(1.0*3)) {
+        ci = 7*tri/2;
+        cj = 2*ht/3;
+      }
+      
+      else if (i < tri && j >= ht && abs(i+0.5-tri/2)<(2*ht-j)/sqrt(1.0*3) ) {
+        ci = tri/2;
+        cj = 4*ht/3;
+      }
+      else if (i>=tri && i<2*tri && j>=ht && abs(i+0.5-3*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+        ci = 3*tri/2;
+        cj = 4*ht/3;
+      }
+      else if (i>=2*tri && i<3*tri && j>=ht && abs(i+0.5-5*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+        ci = 5*tri/2;
+        cj = 4*ht/3;
+      }
+      else if (i>=3*tri && j>=ht && abs(i+0.5-7*tri/2)<(2*ht-j)/sqrt(1.0*3)) {
+        ci = 7*tri/2;
+        cj = 4*ht/3;
+      }
+
+      else {
+        return 0;
+      }
+      d2 = (i+0.5-ci)*(i+0.5-ci)+(j+0.5-cj)*(j+0.5-cj);
+      r2 = (width/4/sqrt(6.0))*(width/4/sqrt(6.0));
+      a  = 1.0/((1+d2/r2)*sqrt(1.0*(1+d2/r2)));
+
+      return a;
+    }
+
+
+
+
 	return 0;
 }
