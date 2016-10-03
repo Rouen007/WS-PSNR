@@ -59,8 +59,8 @@ int main(int argc, char* argv[]) {
 	double psnr_sphere_U = 0;
 	double psnr_sphere_V = 0;
 
-	char *Comp_File1 = (char *)malloc(sizeof(char)*100);
-	char *Comp_File2 = (char *)malloc(sizeof(char)*100);
+	char *Comp_File1 = (char *)malloc(sizeof(char)*1000);
+	char *Comp_File2 = (char *)malloc(sizeof(char)*1000);
 
 	FILE *FpOriginalFile;
 	FILE *FpReconFile;
